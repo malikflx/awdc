@@ -4,7 +4,10 @@
   "description": "A Web Development Company Website",
   "main": "webpack.dev.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "webpack serve --config webpack.dev.js --open",
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "author": "Malik Felix",
   "license": "ISC",
@@ -14,12 +17,10 @@
     "copy-webpack-plugin": "^9.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
     "fetch": "^1.1.0",
     "node-fetch": "^2.6.1",
     "npm": "^7.21.0",
     "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0",
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
@@ -28,8 +29,11 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^6.2.0",
+    "express": "^4.17.1",
     "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
     "jest": "^27.0.6",
     "mini-css-extract-plugin": "^2.2.0",
@@ -37,6 +41,8 @@
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^4.0.0"
   }
 }
