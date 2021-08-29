@@ -1,6 +1,29 @@
-img {
-  width: 250px;
-  height: 100px;
-  padding: 1em;
-  margin: 1em;
+@import url("https://use.typekit.net/nab2rzo.css");
+$text-color: #39405F;
+
+body {
+  // display: flex;
+  // flex-direction: column;
+  color: $text-color;
+  font-family: 'fieldwork', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tagline {
+  display: block;
+  .tagline-item {
+    line-height: 2;
+  }
+  .tag {
+    margin-left: 30em;
+  }
+  .subtag {
+    text-align: center;
+  }
 }
