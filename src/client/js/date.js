@@ -1,32 +1,41 @@
+// Get today's date and format it mm.dd.yyyy
 function fetchDay() {
-  const date = new Date('December 1, 2021 9:34:30');
+  let today = new Date();
+  const dd = String(today.getDate()).padStart(2, '0');
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const yyyy = today.getFullYear();
+  today = `${mm}.${dd}.${yyyy}`;
+  const isoDate = document.querySelector('.iso-date');
+  isoDate.innerHTML = today;
+  // Get day of week based on today's date and assign the day.
+  const date = new Date(today);
   const dateInt = date.getDay();
   console.log(dateInt);
-
   switch (dateInt) {
     case 0:
-      console.log('Sunday');
+      document.querySelector('.day').innerHTML = 'Sunday';
       break;
     case 1:
-      console.log('Monday');
+      document.querySelector('.day').innerHTML = 'Monday';
       break;
     case 2:
-      console.log('Tuesday');
+      document.querySelector('.day').innerHTML = 'Tuesday';
       break;
     case 3:
-      console.log('Wednesday');
+      document.querySelector('.day').innerHTML = 'Wednesday';
       break;
     case 4:
-      console.log('Thursday');
+      document.querySelector('.day').innerHTML = 'Thursday';
       break;
     case 5:
-      console.log('Friday');
+      document.querySelector('.day').innerHTML = 'Friday';
       break;
     case 6:
-      console.log('Saturday');
+      document.querySelector('.day').innerHTML = 'Saturday';
       break;
     default:
-      console.log('error');
+      console.log("Uh oh...this isn't a day of the week!");
   }
 }
+
 export { fetchDay }
