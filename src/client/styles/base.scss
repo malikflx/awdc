@@ -20,13 +20,18 @@ a {
   justify-content: space-between;
   background-color: #FFF;
   padding: 0.5em 2em 0.5em 0em;
+  margin-right: 200em;
   width: 100%;
+
   .nav-content {
     display: flex;
     padding-right: 1em;
-    // justify-content: center;
+    margin-right: 1em;
+    align-items: center;
+
     .nav-link {
       padding: 0.5em;
+
       a {
         text-decoration: none;
         color: inherit;
@@ -35,11 +40,21 @@ a {
   }
 }
 
-#logo-navigation, #nav-button {
+#logo-navigation,
+#nav-button {
   position: fixed;
-  
 }
 
+#nav-button {
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 2.5em;
+  border-radius: 100%;
+  margin-top: 0.2em;
+}
 
 .container {
   display: flex;
@@ -81,6 +96,7 @@ a {
     margin: 2em;
     font-size: 1.5em;
   }
+
   .catch-phrase {
     font-size: 7em;
     margin: 2em 0em 2em 0.5em;
@@ -124,7 +140,7 @@ a {
 .nav-toggle {
   padding: 2.5em;
   background: transparent;
-  border:0;
+  border: 0;
   cursor: pointer;
   position: absolute;
   right: 2em;
@@ -166,7 +182,9 @@ a {
   position: fixed;
 }
 
-.hamburger, .hamburger::before, .hamburger::after {
+.hamburger,
+.hamburger::before,
+.hamburger::after {
   background-color: $text-color;
   // background: 2em;
   width: 2em;
@@ -174,19 +192,20 @@ a {
   position: fixed;
   border-radius: 1em;
   transition: transform 350ms ease-in-out;
- }
+}
 
- .hamburger::before, .hamburger::after {
-  content:'';
+.hamburger::before,
+.hamburger::after {
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
 }
 
-.hamburger::before { 
-  top: 6px; 
+.hamburger::before {
+  top: 6px;
 }
 
-.hamburger::after { 
-  bottom: 6px; 
+.hamburger::after {
+  bottom: 6px;
 }

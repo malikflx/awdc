@@ -1,7 +1,9 @@
 header {
   display: flex;
   padding-top: 1em;
-  // padding: 1em 1em;
+  // margin-left: 1em;
+  margin-right: 1em;
+  // padding: 1em 1em
   // justify-content: space-between;
   // align-items: center;
   font-size: 1.5em;
@@ -12,8 +14,9 @@ header {
     // width: 250px;
     // height: 100px;
     // padding: 0.5em;
-    // margin: 0.5em;
+    margin-left: 1em;
   }
+
   // .nav-content {
   //   display: flex;
   //   .nav-link {
@@ -25,5 +28,3 @@ header {
   //   }
   // }
 }
-
-
