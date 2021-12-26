@@ -22,10 +22,12 @@ let previousScrollPosition = window.pageYOffset;
 
 window.onscroll = function toggleNavBackground() {
   let currentScrollPosition = window.pageYOffset;
+  let logoNavigation = document.getElementById("logo-navigation");
   if (previousScrollPosition > currentScrollPosition) {
-    document.getElementById("logo-navigation").style.display = "flex";
+    logoNavigation.classList.add("fadeOut");
   } else {
-    document.getElementById("logo-navigation").style.display = "none";
+    logoNavigation.classList.remove("fadeOut");
+    logoNavigation.classList.add("fadeIn");
   }
   previousScrollPosition = currentScrollPosition;
 }
