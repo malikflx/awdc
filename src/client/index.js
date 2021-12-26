@@ -24,10 +24,10 @@ window.onscroll = function toggleNavBackground() {
   let currentScrollPosition = window.pageYOffset;
   let logoNavigation = document.getElementById("logo-navigation");
   if (previousScrollPosition > currentScrollPosition) {
-    logoNavigation.classList.add("fadeOut");
-  } else {
     logoNavigation.classList.remove("fadeOut");
     logoNavigation.classList.add("fadeIn");
+  } else {
+    logoNavigation.classList.add("fadeOut");
   }
   previousScrollPosition = currentScrollPosition;
 }
